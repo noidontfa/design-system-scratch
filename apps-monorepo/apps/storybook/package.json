@@ -1,0 +1,37 @@
+{
+  "name": "storybook",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "storybook dev -p 6006 --no-open",
+    "build": "storybook build",
+    "lint": "eslint",
+    "format": "prettier --write \"**/*.{ts,tsx}\"",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run --project=storybook"
+  },
+  "dependencies": {
+    "@workspace/ui": "workspace:*",
+    "next": "16.4.5",
+    "react": "19.3.1",
+    "react-dom": "19.3.1"
+  },
+  "devDependencies": {
+    "@storybook/addon-docs": "10.6.7",
+    "@storybook/addon-vitest": "10.6.7",
+    "@storybook/nextjs-vite": "10.6.7",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "@vitest/browser-playwright": "5.1.0",
+    "@workspace/eslint-config": "workspace:*",
+    "@workspace/typescript-config": "workspace:*",
+    "eslint": "^10",
+    "lucide-react": "1.73.0",
+    "playwright": "1.65.1",
+    "storybook": "10.6.7",
+    "typescript": "^5",
+    "vitest": "5.1.0"
+  }
+}

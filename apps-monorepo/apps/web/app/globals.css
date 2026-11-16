@@ -1,0 +1,6 @@
+@import "@workspace/ui/globals.css";
+@source "./**/*.{ts,tsx}";
+
+.dark {
+  --primary: oklch(0.75 0.14 250);
+}
