@@ -13,54 +13,50 @@ export default meta
 
 type Story = StoryObj<typeof meta>
 
-const names = [
-  "Save",
-  "Outline",
-  "Secondary",
-  "Ghost",
-  "Destructive",
-  "Link",
-  "Extra small",
-  "Small",
-  "Large",
-  "Add",
-  "Add small",
-  "Add extra small",
-  "Add large",
+const variants = [
+  { name: "Save" },
+  { name: "Outline", variant: "outline" },
+  { name: "Secondary", variant: "secondary" },
+  { name: "Ghost", variant: "ghost" },
+  { name: "Destructive", variant: "destructive" },
+  { name: "Link", variant: "link" },
+] as const
+
+const sizes = [
+  { name: "Extra small", size: "xs" },
+  { name: "Small", size: "sm" },
+  { name: "Large", size: "lg" },
+  { name: "Add", size: "icon" },
+  { name: "Add extra small", size: "icon-xs" },
+  { name: "Add small", size: "icon-sm" },
+  { name: "Add large", size: "icon-lg" },
 ] as const
 
 export const Default: Story = {
   render: () => (
     <div className="flex flex-col gap-4">
       <div className="flex flex-wrap items-center gap-3">
-        <Button>Save</Button>
-        <Button variant="outline">Outline</Button>
-        <Button variant="secondary">Secondary</Button>
-        <Button variant="ghost">Ghost</Button>
-        <Button variant="destructive">Destructive</Button>
-        <Button variant="link">Link</Button>
+        {variants.map(({ name, ...props }) => (
+          <Button key={name} {...props}>
+            {name}
+          </Button>
+        ))}
       </div>
       <div className="flex flex-wrap items-center gap-3">
-        <Button size="xs">Extra small</Button>
-        <Button size="sm">Small</Button>
-        <Button size="lg">Large</Button>
-        <Button size="icon" aria-label="Add">
-          <Plus />
-        </Button>
-        <Button size="icon-xs" aria-label="Add extra small">
-          <Plus />
-        </Button>
-        <Button size="icon-sm" aria-label="Add small">
-          <Plus />
-        </Button>
-        <Button size="icon-lg" aria-label="Add large">
-          <Plus />
-        </Button>
+        {sizes.map(({ name, size }) => (
+          <Button
+            key={name}
+            size={size}
+            aria-label={size.startsWith("icon") ? name : undefined}
+          >
+            {size.startsWith("icon") ? <Plus /> : name}
+          </Button>
+        ))}
       </div>
     </div>
   ),
   play: async ({ canvas }) => {
-    for (const name of names) {
+    for (const { name } of [...variants, ...sizes]) {
       await expect(canvas.getByRole("button", { name })).toBeInTheDocument()
     }
   },
