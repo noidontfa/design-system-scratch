@@ -1,0 +1,12 @@
+{
+  "extends": "@workspace/typescript-config/nextjs.json",
+  "compilerOptions": {
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ]
+  },
+  "include": ["**/*.ts", "**/*.tsx", ".storybook/**/*.ts"],
+  "exclude": ["node_modules", "storybook-static"]
+}
