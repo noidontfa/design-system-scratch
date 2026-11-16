@@ -1,0 +1,6 @@
+@import "@workspace/ui/globals.css";
+
+/* PROTOTYPE: this app overrides a different token than apps/web. */
+:root {
+  --primary: oklch(0.55 0.17 145);
+}

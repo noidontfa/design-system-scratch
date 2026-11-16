@@ -1,0 +1,6 @@
+@import "@workspace/ui/globals.css";
+
+/* PROTOTYPE: app-level token override, below the shared import. */
+:root {
+  --primary: oklch(0.45 0.15 250);
+}
