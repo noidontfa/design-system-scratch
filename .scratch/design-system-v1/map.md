@@ -23,6 +23,7 @@ A written **v1 spec** for an internal design system built on Next.js, shadcn/ui 
 
 <!-- one line per resolved ticket: [title](link): gist -->
 
+- [How mature is shadcn/ui's Base UI support?](issues/01-shadcn-base-ui-support.md): mature. Base UI has been shadcn's default since Jul 2026 and covers every Radix component plus Toast, with `render` replacing `asChild`. Base UI is stable at v1.x; pin it and avoid preview APIs.
 - [What are the options for distributing shadcn-based components to several Next.js apps?](issues/02-distribution-models.md): a monorepo package gives one source of truth but stays in one repo; a private registry suits separate repos but updates are manual and tokens get copied per app; the hybrid works across repos but means two pipelines. The choice hinges on whether apps share a repo.
 
 ## Not yet specified
@@ -30,8 +31,8 @@ A written **v1 spec** for an internal design system built on Next.js, shadcn/ui 
 - **Versioning and release flow** (e.g. changesets, semver, how apps upgrade): depends on the distribution model.
 - **Testing strategy:** accessibility checks, visual regression, interaction tests in Storybook. Unclear how much is worth it for a solo v1.
 - **Server and client component boundaries:** where `"use client"` lives, and whether anything ships as a Server Component.
-- **Component API conventions:** variant handling (cva / tailwind-variants), composition and `render` props from Base UI, naming, and how far to deviate from upstream shadcn code.
-- **Stack integration spike:** a tiny end-to-end proof (one component, themed, in Storybook, consumed by a Next.js app). It can only be specified once the distribution model and repo layout are known.
+- **Component API conventions:** variant handling (cva / tailwind-variants), composition and `render` props from Base UI, naming, how far to deviate from upstream shadcn code, and which shadcn `base-*` style to start from (it can't be changed after init).
+- **Stack integration spike:** a tiny end-to-end proof (one component, themed, in Storybook, consumed by a Next.js app). It can only be specified once the distribution model and repo layout are known. It must also confirm points the research left unverified: whether Tailwind v4 scans pnpm-symlinked or shared-package paths via `@source`, whether `"use client"` survives the package build, and that `shadcn init --base base` works end to end in a fresh Next.js app.
 - **Adoption path:** how existing internal apps migrate onto the system.
 - **Icons:** lucide (shadcn default) or something else.
 - **Final spec assembly:** turning resolved decisions into the handoff spec document.
