@@ -23,6 +23,8 @@ A written **v1 spec** for an internal design system built on Next.js, shadcn/ui 
 
 <!-- one line per resolved ticket: [title](link): gist -->
 
+- [What are the options for distributing shadcn-based components to several Next.js apps?](issues/02-distribution-models.md): a monorepo package gives one source of truth but stays in one repo; a private registry suits separate repos but updates are manual and tokens get copied per app; the hybrid works across repos but means two pipelines. The choice hinges on whether apps share a repo.
+
 ## Not yet specified
 
 - **Versioning and release flow** (e.g. changesets, semver, how apps upgrade): depends on the distribution model.
