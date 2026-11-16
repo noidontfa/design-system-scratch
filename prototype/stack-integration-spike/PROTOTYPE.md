@@ -4,7 +4,7 @@ Question: does the repo layout from "Decide the repo and tooling layout" work en
 
 One themed button lives in `packages/ui` (`"use client"`, token colours, click count on the button). `apps/web` and `apps/other` each own an entry `globals.css` that imports `@workspace/ui/globals.css`. `apps/storybook` renders the same button.
 
-Run from this directory, on Node 22 (see `.nvmrc`). Node 20 cannot run the pinned pnpm 11.25.0.
+Run from this directory, on Node 26 (see `.nvmrc`). Node 20 cannot run the pinned pnpm 11.25.0.
 
 ```sh
 pnpm dev
