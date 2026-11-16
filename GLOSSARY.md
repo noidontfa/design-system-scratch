@@ -16,6 +16,14 @@ _Avoid_: shared component, primitive (reserved for the underlying Base UI buildi
 An internal product app that uses the design system.
 _Avoid_: client, host app, consumer
 
+**App shell**:
+The persistent frame of a consuming app (navigation, header and content area) that wraps its pages. Owned by the consuming app, not the design system.
+_Avoid_: layout, chrome
+
+**Dashboard**:
+A page inside an app shell that shows summary content. Currently a placeholder view at `/dashboard`.
+_Avoid_: home, overview
+
 **Design token**:
 A named design value (colour, radius or font family) that core components read by role, never by raw value.
 _Avoid_: theme variable, style constant
