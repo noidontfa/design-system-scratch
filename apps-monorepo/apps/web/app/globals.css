@@ -1,4 +1,5 @@
 @import "@workspace/ui/globals.css";
+@import "./index.css";
 @source "./**/*.{ts,tsx}";
 
 .dark {
