@@ -3,7 +3,7 @@
 import Image from "next/image"
 import { motion } from "framer-motion"
 
-import { fadeUp } from "@/components/mindloop/fade-up"
+import { fadeUp } from "@/features/mindloop/components/fade-up"
 
 const platforms = [
   {

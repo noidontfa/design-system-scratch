@@ -4,8 +4,8 @@ import { useEffect, useRef } from "react"
 import { motion } from "framer-motion"
 import type Hls from "hls.js"
 
-import { fadeUp } from "@/components/mindloop/fade-up"
-import { LogoMark } from "@/components/mindloop/logo-mark"
+import { fadeUp } from "@/features/mindloop/components/fade-up"
+import { LogoMark } from "@/features/mindloop/components/logo-mark"
 
 const HLS_URL =
   "https://stream.mux.com/8wrHPCX2dC3msyYU9ObwqNdm00u3ViXvOSHUMRYSEe5Q.m3u8"

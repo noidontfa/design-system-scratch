@@ -2,15 +2,15 @@
 
 import { MotionConfig } from "framer-motion"
 
-import { CtaSection } from "@/components/mindloop/cta-section"
-import { Hero } from "@/components/mindloop/hero"
-import { MissionSection } from "@/components/mindloop/mission-section"
-import { Navbar } from "@/components/mindloop/navbar"
-import { SearchSection } from "@/components/mindloop/search-section"
-import { SiteFooter } from "@/components/mindloop/site-footer"
-import { SolutionSection } from "@/components/mindloop/solution-section"
+import { CtaSection } from "@/features/mindloop/components/cta-section"
+import { Hero } from "@/features/mindloop/components/hero"
+import { MissionSection } from "@/features/mindloop/components/mission-section"
+import { Navbar } from "@/features/mindloop/components/navbar"
+import { SearchSection } from "@/features/mindloop/components/search-section"
+import { SiteFooter } from "@/features/mindloop/components/site-footer"
+import { SolutionSection } from "@/features/mindloop/components/solution-section"
 
-export function LandingPage() {
+export default function LandingPage() {
   return (
     <MotionConfig reducedMotion="user">
       <div className="mindloop min-h-svh bg-background text-foreground">

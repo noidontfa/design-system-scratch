@@ -8,8 +8,8 @@ import {
   type MotionValue,
 } from "framer-motion"
 
-import { fadeUp } from "@/components/mindloop/fade-up"
-import { LoopVideo } from "@/components/mindloop/loop-video"
+import { fadeUp } from "@/features/mindloop/components/fade-up"
+import { LoopVideo } from "@/features/mindloop/components/loop-video"
 import { cn } from "@workspace/ui/lib/utils"
 
 const MISSION_VIDEO =

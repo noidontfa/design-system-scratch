@@ -2,12 +2,12 @@
 
 import { motion } from "framer-motion"
 
-import { LogoMark } from "@/components/mindloop/logo-mark"
+import { LogoMark } from "@/features/mindloop/components/logo-mark"
 import {
   Instagram,
   Linkedin,
   Twitter,
-} from "@/components/mindloop/social-icons"
+} from "@/features/mindloop/components/social-icons"
 
 const links = [
   { label: "Home", href: "#home" },

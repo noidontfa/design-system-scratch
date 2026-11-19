@@ -1,6 +1,6 @@
 import type { Metadata } from "next"
 
-import { LandingPage } from "@/components/mindloop/landing-page"
+import LandingPage from "@/features/mindloop/page"
 
 export const metadata: Metadata = {
   title: "Mindloop",
